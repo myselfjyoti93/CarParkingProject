@@ -30,7 +30,6 @@ class Controller:
             file_input = open(file)
             for line in file_input:
                 Controller.parse_commands(line.replace('\n', ''))
+            file_input.close()
         except Exception as ex:
             logger.error(f"Exception raise {ex}")
-        finally:
-            file_input.close()
