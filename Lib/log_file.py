@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 import logging as logger
-logger.basicConfig(level=logger.DEBUG, filename='.\Log\car_parking.log', format='%(asctime)s %(levelname)s:%(message)s')
+import os
+log_folder_path = os.path.dirname(os.path.abspath("Log"))
+log_folder = os.path.join(log_folder_path, "Log")
+log_file = os.path.join(log_folder, "car_parking.log")
+
+logger.basicConfig(level=logger.DEBUG, filename=log_file, format='%(asctime)s %(levelname)s:%(message)s')
 logger = logger
 class Logger:
 

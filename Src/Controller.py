@@ -24,10 +24,13 @@ class Controller:
     @staticmethod
     def controller():
         try:
-            file_input = open(os.path.join(SAMPLE_INPUT_FOLDER, SAMPLE_INPUT_FILE))
+            folder_path = os.path.dirname(os.path.abspath(SAMPLE_INPUT_FOLDER))
+            folder = os.path.join(folder_path, SAMPLE_INPUT_FOLDER)
+            file = os.path.join(folder, SAMPLE_INPUT_FILE)
+            file_input = open(file)
             for line in file_input:
                 Controller.parse_commands(line.replace('\n', ''))
         except Exception as ex:
-            log(f"Exception raise {ex}")
+            logger.error(f"Exception raise {ex}")
         finally:
             file_input.close()
