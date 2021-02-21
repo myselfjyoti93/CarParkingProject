@@ -1,4 +1,4 @@
-1. The Project must be run with Python3
+1. The Project must be run with Python3. Please install Python3 before running it.
 2. The input file is given in "CarParking\Inputs\Sample_Input_File.txt, The action steps are mentioned here. This can be modifed to run steps for different scenario
 3. The output is shown in the console
 4. It can be run with separate Python env or in Python standalone
